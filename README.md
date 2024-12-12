@@ -1,16 +1,7 @@
-# cocktail_bar_app
+# Efficient JSON Parsing in Flutter with Retrofit 🚀
 
-A new Flutter project.
+This project demonstrates how to set up Retrofit in Flutter for API integration, offload JSON parsing to background threads, and optimize performance. Using this approach, you can keep your app responsive, even when handling large datasets.
 
-## Getting Started
+## Full Article
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+For a detailed guide on implementing background JSON parsing with Retrofit in Flutter, check out the full article [here](https://medium.com/@geraldnuraj/efficient-json-parsing-in-the-background-with-retrofit-in-flutter-88647ea9dcfc). 
