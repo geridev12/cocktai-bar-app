@@ -32,12 +32,25 @@ class CocktailView extends StatelessWidget {
   const CocktailView({super.key});
 
   @override
-  Widget build(BuildContext context) => BlocBuilder<CocktailsBloc, DrinksState>(
+  Widget build(BuildContext context) =>
+      BlocConsumer<CocktailsBloc, DrinksState>(
+        listener: (context, state) {
+          if (state is ErrorCocktailsState) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Text(
+                  state.error.toString(),
+                ),
+              ),
+            );
+          }
+        },
         builder: (context, state) => switch (state) {
           LoadingCocktailsState() => const LoadingCocktailsView(),
 
           /// Includes both error and loaded states, ensuring that
-          /// if an error occurs, the previous cocktail list is displayed.
+          /// if an error occurs, the previous cocktail list is displayed and
+          /// an snackbar error is shown.
           _ => CocktailsView(
               drinks: state.drinks,
             ),
