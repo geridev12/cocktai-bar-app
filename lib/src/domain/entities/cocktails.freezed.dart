@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'drinks.dart';
+part of 'cocktails.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,43 +14,44 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-Drinks _$DrinksFromJson(Map<String, dynamic> json) {
-  return _MargaritaCocktails.fromJson(json);
+Cocktails _$CocktailsFromJson(Map<String, dynamic> json) {
+  return _Cocktails.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Drinks {
+mixin _$Cocktails {
   @JsonKey(name: 'drinks')
   List<Cocktail>? get margaritaCocktails => throw _privateConstructorUsedError;
 
-  /// Serializes this Drinks to a JSON map.
+  /// Serializes this Cocktails to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of Drinks
+  /// Create a copy of Cocktails
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $DrinksCopyWith<Drinks> get copyWith => throw _privateConstructorUsedError;
+  $CocktailsCopyWith<Cocktails> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DrinksCopyWith<$Res> {
-  factory $DrinksCopyWith(Drinks value, $Res Function(Drinks) then) =
-      _$DrinksCopyWithImpl<$Res, Drinks>;
+abstract class $CocktailsCopyWith<$Res> {
+  factory $CocktailsCopyWith(Cocktails value, $Res Function(Cocktails) then) =
+      _$CocktailsCopyWithImpl<$Res, Cocktails>;
   @useResult
   $Res call({@JsonKey(name: 'drinks') List<Cocktail>? margaritaCocktails});
 }
 
 /// @nodoc
-class _$DrinksCopyWithImpl<$Res, $Val extends Drinks>
-    implements $DrinksCopyWith<$Res> {
-  _$DrinksCopyWithImpl(this._value, this._then);
+class _$CocktailsCopyWithImpl<$Res, $Val extends Cocktails>
+    implements $CocktailsCopyWith<$Res> {
+  _$CocktailsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Drinks
+  /// Create a copy of Cocktails
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -67,32 +68,32 @@ class _$DrinksCopyWithImpl<$Res, $Val extends Drinks>
 }
 
 /// @nodoc
-abstract class _$$MargaritaCocktailsImplCopyWith<$Res>
-    implements $DrinksCopyWith<$Res> {
-  factory _$$MargaritaCocktailsImplCopyWith(_$MargaritaCocktailsImpl value,
-          $Res Function(_$MargaritaCocktailsImpl) then) =
-      __$$MargaritaCocktailsImplCopyWithImpl<$Res>;
+abstract class _$$CocktailsImplCopyWith<$Res>
+    implements $CocktailsCopyWith<$Res> {
+  factory _$$CocktailsImplCopyWith(
+          _$CocktailsImpl value, $Res Function(_$CocktailsImpl) then) =
+      __$$CocktailsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'drinks') List<Cocktail>? margaritaCocktails});
 }
 
 /// @nodoc
-class __$$MargaritaCocktailsImplCopyWithImpl<$Res>
-    extends _$DrinksCopyWithImpl<$Res, _$MargaritaCocktailsImpl>
-    implements _$$MargaritaCocktailsImplCopyWith<$Res> {
-  __$$MargaritaCocktailsImplCopyWithImpl(_$MargaritaCocktailsImpl _value,
-      $Res Function(_$MargaritaCocktailsImpl) _then)
+class __$$CocktailsImplCopyWithImpl<$Res>
+    extends _$CocktailsCopyWithImpl<$Res, _$CocktailsImpl>
+    implements _$$CocktailsImplCopyWith<$Res> {
+  __$$CocktailsImplCopyWithImpl(
+      _$CocktailsImpl _value, $Res Function(_$CocktailsImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Drinks
+  /// Create a copy of Cocktails
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? margaritaCocktails = freezed,
   }) {
-    return _then(_$MargaritaCocktailsImpl(
+    return _then(_$CocktailsImpl(
       margaritaCocktails: freezed == margaritaCocktails
           ? _value._margaritaCocktails
           : margaritaCocktails // ignore: cast_nullable_to_non_nullable
@@ -103,14 +104,14 @@ class __$$MargaritaCocktailsImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$MargaritaCocktailsImpl implements _MargaritaCocktails {
-  const _$MargaritaCocktailsImpl(
+class _$CocktailsImpl implements _Cocktails {
+  _$CocktailsImpl(
       {@JsonKey(name: 'drinks')
       required final List<Cocktail>? margaritaCocktails})
       : _margaritaCocktails = margaritaCocktails;
 
-  factory _$MargaritaCocktailsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$MargaritaCocktailsImplFromJson(json);
+  factory _$CocktailsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CocktailsImplFromJson(json);
 
   final List<Cocktail>? _margaritaCocktails;
   @override
@@ -126,14 +127,14 @@ class _$MargaritaCocktailsImpl implements _MargaritaCocktails {
 
   @override
   String toString() {
-    return 'Drinks(margaritaCocktails: $margaritaCocktails)';
+    return 'Cocktails(margaritaCocktails: $margaritaCocktails)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MargaritaCocktailsImpl &&
+            other is _$CocktailsImpl &&
             const DeepCollectionEquality()
                 .equals(other._margaritaCocktails, _margaritaCocktails));
   }
@@ -143,40 +144,38 @@ class _$MargaritaCocktailsImpl implements _MargaritaCocktails {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_margaritaCocktails));
 
-  /// Create a copy of Drinks
+  /// Create a copy of Cocktails
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$MargaritaCocktailsImplCopyWith<_$MargaritaCocktailsImpl> get copyWith =>
-      __$$MargaritaCocktailsImplCopyWithImpl<_$MargaritaCocktailsImpl>(
-          this, _$identity);
+  _$$CocktailsImplCopyWith<_$CocktailsImpl> get copyWith =>
+      __$$CocktailsImplCopyWithImpl<_$CocktailsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MargaritaCocktailsImplToJson(
+    return _$$CocktailsImplToJson(
       this,
     );
   }
 }
 
-abstract class _MargaritaCocktails implements Drinks {
-  const factory _MargaritaCocktails(
-          {@JsonKey(name: 'drinks')
-          required final List<Cocktail>? margaritaCocktails}) =
-      _$MargaritaCocktailsImpl;
+abstract class _Cocktails implements Cocktails {
+  factory _Cocktails(
+      {@JsonKey(name: 'drinks')
+      required final List<Cocktail>? margaritaCocktails}) = _$CocktailsImpl;
 
-  factory _MargaritaCocktails.fromJson(Map<String, dynamic> json) =
-      _$MargaritaCocktailsImpl.fromJson;
+  factory _Cocktails.fromJson(Map<String, dynamic> json) =
+      _$CocktailsImpl.fromJson;
 
   @override
   @JsonKey(name: 'drinks')
   List<Cocktail>? get margaritaCocktails;
 
-  /// Create a copy of Drinks
+  /// Create a copy of Cocktails
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$MargaritaCocktailsImplCopyWith<_$MargaritaCocktailsImpl> get copyWith =>
+  _$$CocktailsImplCopyWith<_$CocktailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

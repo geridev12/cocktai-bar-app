@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:cocktail_bar_app/src/domain/entities/drinks.dart';
+import 'package:cocktail_bar_app/src/domain/entities/cocktails.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:retrofit/retrofit.dart';
@@ -18,10 +18,10 @@ abstract class CocktailsRestClient {
   }) = _CocktailsRestClient;
 
   @GET('/search.php?s=margarita')
-  Future<Drinks> fetchMargaritaCocktails();
+  Future<Cocktails> fetchMargaritaCocktails();
 }
 
-FutureOr<Drinks> deserializeDrinks(
+FutureOr<Cocktails> deserializeCocktails(
   Map<String, dynamic> json,
 ) =>
-    Drinks.fromJson(json);
+    Cocktails.fromJson(json);

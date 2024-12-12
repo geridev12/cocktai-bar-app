@@ -4,16 +4,16 @@ sealed class CocktailsEvent {
   const CocktailsEvent();
 
   const factory CocktailsEvent.fetchMargaritaCocktails({
-    required Drinks drinks,
+    required Cocktails cocktails,
   }) = _FetchMargaritaCocktailsEvent;
 }
 
 final class _FetchMargaritaCocktailsEvent extends CocktailsEvent {
-  const _FetchMargaritaCocktailsEvent({required this.drinks});
+  const _FetchMargaritaCocktailsEvent({required this.cocktails});
 
-  final Drinks drinks;
+  final Cocktails cocktails;
 
   @override
   String toString() =>
-      'CocktailsEvent.fetchMargaritaCocktails(drinks: $drinks)';
+      'CocktailsEvent.fetchMargaritaCocktails(cocktails: $cocktails)';
 }

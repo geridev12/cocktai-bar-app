@@ -1,5 +1,5 @@
 import 'package:cocktail_bar_app/src/bloc/cocktails_bloc.dart';
-import 'package:cocktail_bar_app/src/domain/entities/drinks.dart';
+import 'package:cocktail_bar_app/src/domain/entities/cocktails.dart';
 import 'package:cocktail_bar_app/src/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -20,7 +20,7 @@ class CocktailPage extends StatelessWidget {
             initialState: const InitialCocktailsState(),
           )..add(
               CocktailsEvent.fetchMargaritaCocktails(
-                drinks: Drinks.initial(),
+                cocktails: Cocktails.initial(),
               ),
             ),
           child: const CocktailView(),
@@ -33,7 +33,7 @@ class CocktailView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) =>
-      BlocConsumer<CocktailsBloc, DrinksState>(
+      BlocConsumer<CocktailsBloc, CocktailsState>(
         listener: (context, state) {
           if (state is ErrorCocktailsState) {
             ScaffoldMessenger.of(context).showSnackBar(
@@ -52,7 +52,7 @@ class CocktailView extends StatelessWidget {
           /// if an error occurs, the previous cocktail list is displayed and
           /// an snackbar error is shown.
           _ => CocktailsView(
-              drinks: state.drinks,
+              cocktails: state.cocktails,
             ),
         },
       );

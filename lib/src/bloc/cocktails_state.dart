@@ -1,47 +1,47 @@
 part of 'cocktails_bloc.dart';
 
-sealed class DrinksState {
-  const DrinksState({this.drinks});
+sealed class CocktailsState {
+  const CocktailsState({this.cocktails});
 
-  final Drinks? drinks;
+  final Cocktails? cocktails;
 }
 
-final class InitialCocktailsState extends DrinksState {
-  const InitialCocktailsState({super.drinks});
+final class InitialCocktailsState extends CocktailsState {
+  const InitialCocktailsState({super.cocktails});
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is InitialCocktailsState && other.drinks == drinks;
+    return other is InitialCocktailsState && other.cocktails == cocktails;
   }
 
   @override
-  int get hashCode => drinks.hashCode;
+  int get hashCode => cocktails.hashCode;
 
   @override
-  String toString() => 'CocktailListState.initial(drinks: $drinks)';
+  String toString() => 'CocktailListState.initial(cocktails: $cocktails)';
 }
 
-final class LoadingCocktailsState extends DrinksState {
-  const LoadingCocktailsState({super.drinks});
+final class LoadingCocktailsState extends CocktailsState {
+  const LoadingCocktailsState({super.cocktails});
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is LoadingCocktailsState && other.drinks == drinks;
+    return other is LoadingCocktailsState && other.cocktails == cocktails;
   }
 
   @override
-  int get hashCode => drinks.hashCode;
+  int get hashCode => cocktails.hashCode;
 
   @override
-  String toString() => 'CocktailListState.loading(drinks: $drinks)';
+  String toString() => 'CocktailListState.loading(cocktails: $cocktails)';
 }
 
-final class ErrorCocktailsState extends DrinksState {
-  const ErrorCocktailsState({required this.error, super.drinks});
+final class ErrorCocktailsState extends CocktailsState {
+  const ErrorCocktailsState({required this.error, super.cocktails});
 
   final Object error;
 
@@ -50,14 +50,14 @@ final class ErrorCocktailsState extends DrinksState {
     if (identical(this, other)) return true;
 
     return other is ErrorCocktailsState &&
-        other.drinks == drinks &&
+        other.cocktails == cocktails &&
         other.error == error;
   }
 
   @override
-  int get hashCode => Object.hash(drinks, error);
+  int get hashCode => Object.hash(cocktails, error);
 
   @override
   String toString() =>
-      'CocktailListState.error(drinks: $drinks, error: $error)';
+      'CocktailListState.error(cocktails: $cocktails, error: $error)';
 }

@@ -1,29 +1,29 @@
-import 'package:cocktail_bar_app/src/domain/entities/drinks.dart';
+import 'package:cocktail_bar_app/src/domain/entities/cocktails.dart';
 import 'package:flutter/material.dart';
 
 class CocktailsView extends StatelessWidget {
   const CocktailsView({
     super.key,
-    required this.drinks,
+    required this.cocktails,
   });
 
-  final Drinks? drinks;
+  final Cocktails? cocktails;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
-    return switch (drinks?.margaritaCocktails) {
+    return switch (cocktails?.margaritaCocktails) {
       null => const SizedBox.shrink(),
       _ => ListView.separated(
-          itemCount: drinks!.margaritaCocktails!.length,
+          itemCount: cocktails!.margaritaCocktails!.length,
           padding: const EdgeInsets.only(
             top: 15,
             bottom: kBottomNavigationBarHeight,
           ),
           separatorBuilder: (_, __) => const SizedBox(height: 20),
           itemBuilder: (context, index) {
-            final cocktail = drinks!.margaritaCocktails![index];
+            final cocktail = cocktails!.margaritaCocktails![index];
             final id = cocktail.id;
             final imageUrl = cocktail.imageUrl;
             final name = cocktail.name;
