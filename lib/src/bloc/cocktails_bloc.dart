@@ -27,7 +27,7 @@ final class CocktailsBloc extends Bloc<CocktailsEvent, DrinksState> {
     try {
       emit(LoadingCocktailsState(drinks: state.drinks));
       final drinks = await _cocktailsRepository.fetchMargaritaCocktails();
-      emit(ErrorCocktailsState(error: "dskmskdmskds", drinks: drinks));
+      emit(InitialCocktailsState(drinks: drinks));
     } catch (error) {
       emit(
         ErrorCocktailsState(
