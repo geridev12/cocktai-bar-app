@@ -36,7 +36,7 @@ final class CocktailsBloc extends Bloc<CocktailsEvent, CocktailsState> {
           cocktails: cocktails,
         ),
       );
-    } catch (error) {
+    } on Object catch (error) {
       emit(
         ErrorCocktailsState(
           cocktails: event.cocktails,
