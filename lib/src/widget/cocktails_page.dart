@@ -1,6 +1,7 @@
 import 'package:cocktail_bar_app/src/bloc/cocktails_bloc.dart';
 import 'package:cocktail_bar_app/src/domain/entities/cocktails.dart';
-import 'package:cocktail_bar_app/src/presentation/widgets/widgets.dart';
+import 'package:cocktail_bar_app/src/widget/cocktails_view.dart';
+import 'package:cocktail_bar_app/src/widget/loading_cocktails_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

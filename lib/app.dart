@@ -1,4 +1,4 @@
-import 'package:cocktail_bar_app/src/presentation/cocktails_page.dart';
+import 'package:cocktail_bar_app/src/widget/cocktails_page.dart';
 import 'package:flutter/material.dart';
 
 class CocktailBarApp extends StatelessWidget {
